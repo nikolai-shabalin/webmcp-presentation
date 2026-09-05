@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0c">
+  <meta name="description" content="WebMCP: 10 слайдов о браузерных инструментах для AI-агентов и 10 универсальных макетов презентации.">
+  <title>WebMCP — интерфейс для агентов / Scrolls</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#slide-1">К презентации</a>
+  <main class="slides" aria-label="WebMCP и библиотека макетов">
+
+    <section class="slide slide--ink" id="slide-1" aria-labelledby="title-1" data-part="WebMCP" data-layout="Обложка">
+      <div class="slide__canvas"><div class="slide__body layout-cover">
+        <p class="eyebrow reveal"><span class="brand">scrolls®</span> / Frontend &amp; AI / 2026</p>
+        <div class="cover-heading reveal"><p class="mono overline">Web Model Context Protocol</p><h1 id="title-1">Web<span class="accent">MCP</span><span class="cover-dot">↗</span></h1></div>
+        <div class="cover-bottom reveal"><p class="lead">Веб-интерфейс<br>для AI-агентов</p><p class="small-copy">Действия сайта становятся<br>инструментами с понятным контрактом.</p></div>
+        <footer class="slide-footer"><span>01—10 / Технология</span><span>Обзор · 05.09.2026</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-2" aria-labelledby="title-2" data-part="WebMCP" data-layout="Сравнение">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">01 / Зачем это нужно</p>
+        <h2 id="title-2" class="reveal">Действию нужен<br>понятный контракт</h2>
+        <div class="layout-comparison stagger">
+          <article><span class="mono">Через интерфейс</span><h3>Найти и нажать</h3><p>Агент читает страницу, ищет элементы и связывает клики в сценарий.</p><div class="path mono">Экран → Элемент → Клик</div></article>
+          <article><span class="mono">Через WebMCP</span><h3>Вызвать инструмент</h3><p>Сайт описывает действие и входные параметры. Агент вызывает нужную функцию.</p><div class="path mono">Цель → Tool → Результат</div></article>
+        </div>
+        <footer class="slide-footer"><a href="https://developer.chrome.com/blog/webmcp-epp" target="_blank" rel="noreferrer">Источник / Chrome for Developers ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--violet" id="slide-3" aria-labelledby="title-3" data-part="WebMCP" data-layout="Схема">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">02 / Модель взаимодействия</p>
+        <h2 id="title-3" class="reveal">Логика сайта —<br>в контексте страницы</h2>
+        <ol class="layout-process stagger">
+          <li><b>01</b><span>Пользователь</span><small>Формулирует задачу</small></li>
+          <li><b>02</b><span>AI-агент</span><small>Выбирает инструмент</small></li>
+          <li><b>03</b><span>Браузер</span><small>Передаёт вызов странице</small></li>
+          <li><b>04</b><span>Веб-приложение</span><small>Выполняет свой код</small></li>
+        </ol>
+        <p class="process-note reveal">Результат возвращается агенту.<br>Человек и агент работают в общем интерфейсе.</p>
+        <footer class="slide-footer"><a href="https://github.com/webmachinelearning/webmcp/blob/main/README.md" target="_blank" rel="noreferrer">Источник / WebMCP Explainer ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-4" aria-labelledby="title-4" data-part="WebMCP" data-layout="Два подхода">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">03 / Два способа описать действие</p>
+        <h2 id="title-4" class="reveal">HTML или JavaScript</h2>
+        <div class="api-pair stagger">
+          <article><strong class="api-symbol">&lt;form&gt;</strong><h3>Декларативный API</h3><p>Формы и поля задают инструмент: имя, описание и параметры ввода.</p><span class="mono">Поиск / Заявка / Фильтры</span></article>
+          <article><strong class="api-symbol">{ fn }</strong><h3>Императивный API</h3><p>JavaScript регистрирует инструмент и функцию для выполнения действия.</p><span class="mono">Динамика / Состояние / Логика</span></article>
+        </div>
+        <footer class="slide-footer"><a href="https://developer.chrome.com/blog/webmcp-epp" target="_blank" rel="noreferrer">Источник / Chrome for Developers ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--ink" id="slide-5" aria-labelledby="title-5" data-part="WebMCP" data-layout="JavaScript">
+      <div class="slide__canvas"><div class="slide__body layout-code">
+        <div><p class="eyebrow reveal">04 / Императивный API</p><h2 id="title-5" class="reveal">Описать.<br>Проверить.<br><span class="accent">Выполнить.</span></h2><ol class="code-notes stagger"><li>Имя и назначение инструмента</li><li>Схема входных параметров</li><li>Обработчик с проверкой данных</li></ol><p class="small-copy reveal">Учебный пример по draft от 04.09.2026.<br>Старые preview используют navigator.modelContext.</p></div>
+        <figure class="code-frame reveal"><figcaption>register-tool.js <span>JavaScript</span></figcaption><pre class="code"><code data-language="javascript">if (document.modelContext) {
+  await document.modelContext.registerTool({
+    name: "greet_user",
+    description: "Поприветствовать по имени",
+    inputSchema: {
+      type: "object",
+      properties: { name: { type: "string" } },
+      required: ["name"]
+    },
+    execute: async ({ name }) => {
+      if (typeof name !== "string") {
+        throw new TypeError("Нужно имя");
+      }
+      return { greeting: `Привет, ${name}!` };
+    }
+  });
+}</code></pre></figure>
+        <footer class="slide-footer"><a href="https://webmachinelearning.github.io/webmcp/" target="_blank" rel="noreferrer">Источник / WebMCP · §4 API ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-6" aria-labelledby="title-6" data-part="WebMCP" data-layout="HTML">
+      <div class="slide__canvas"><div class="slide__body layout-code">
+        <div><p class="eyebrow reveal">05 / Декларативный API</p><h2 id="title-6" class="reveal">Форма уже<br>описывает<br>действие</h2><p class="body-copy reveal">Атрибуты называют инструмент.<br>Поля формы задают его параметры.</p><p class="small-copy reveal">Разметка из предложения API.<br>Обработка запроса остаётся у приложения.</p></div>
+        <figure class="code-frame reveal"><figcaption>search.html <span>HTML</span></figcaption><pre class="code"><code data-language="html">&lt;form action="/search"
+      toolname="search_catalog"
+      tooldescription="Поиск по каталогу"&gt;
+
+  &lt;label for="query"&gt;Что найти?&lt;/label&gt;
+  &lt;input id="query"
+         name="query"
+         type="search"
+         required&gt;
+
+  &lt;button type="submit"&gt;
+    Найти
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre></figure>
+        <footer class="slide-footer"><a href="https://github.com/webmachinelearning/webmcp/blob/main/declarative-api-explainer.md" target="_blank" rel="noreferrer">Источник / Declarative API Explainer ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--acid" id="slide-7" aria-labelledby="title-7" data-part="WebMCP" data-layout="Тезис">
+      <div class="slide__canvas"><div class="slide__body layout-statement">
+        <p class="eyebrow reveal">06 / Дизайн инструмента</p>
+        <h2 id="title-7" class="reveal">Один инструмент.<br>Одно понятное<br>действие.</h2>
+        <div class="statement-proof reveal"><span class="statement-arrow">↗</span><p>Например, <code>search_catalog</code>:<br>найти товары по запросу, без покупки.</p></div>
+        <footer class="slide-footer"><span>Практический принцип / Узкий контракт</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--ink" id="slide-8" aria-labelledby="title-8" data-part="WebMCP" data-layout="Список">
+      <div class="slide__canvas"><div class="slide__body layout-split">
+        <div><p class="eyebrow reveal">07 / Контроль выполнения</p><h2 id="title-8" class="reveal">Контракт —<br>ещё не<br><span class="accent">разрешение</span></h2></div>
+        <ol class="editorial-list stagger"><li><span>01</span><div><h3>Проверяйте входные данные</h3><p>JSON Schema описывает ожидания. Валидацию выполняет приложение.</p></div></li><li><span>02</span><div><h3>Проверяйте права</h3><p>Доступ к данным и операциям контролируется в вашей бизнес-логике.</p></div></li><li><span>03</span><div><h3>Подтверждайте последствия</h3><p>Перед важным изменением показывайте человеку действие и его параметры.</p></div></li></ol>
+        <footer class="slide-footer"><a href="https://webmachinelearning.github.io/webmcp/" target="_blank" rel="noreferrer">Источник / WebMCP · §6 Security ↗</a><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-9" aria-labelledby="title-9" data-part="WebMCP" data-layout="Сценарии">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">08 / Где применять</p>
+        <h2 id="title-9" class="reveal">Начните с частого сценария</h2>
+        <div class="use-cases stagger"><article><span class="case-index">01</span><h3>Поддержка</h3><p>Собрать сведения о проблеме и подготовить обращение.</p><code>create_ticket</code></article><article><span class="case-index">02</span><h3>Каталог</h3><p>Найти товар по характеристикам и выбранным фильтрам.</p><code>search_products</code></article><article><span class="case-index">03</span><h3>Поездки</h3><p>Подобрать рейсы по маршруту, датам и предпочтениям.</p><code>find_flights</code></article></div>
+        <footer class="slide-footer"><a href="https://developer.chrome.com/blog/webmcp-epp" target="_blank" rel="noreferrer">Источник / Chrome · Use cases ↗</a><span>Названия tools условные</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--violet" id="slide-10" aria-labelledby="title-10" data-part="WebMCP" data-layout="Итоги и источники">
+      <div class="slide__canvas"><div class="slide__body layout-split">
+        <div><p class="eyebrow reveal">09 / Следующий шаг</p><h2 id="title-10" class="reveal">Один tool.<br>Один сценарий.<br>Первый<br>прототип.</h2></div>
+        <div class="takeaway reveal"><span class="status-tag">Draft / Experimental</span><p class="lead">WebMCP ещё развивается</p><p class="body-copy">Спецификация — проект Community Group, а не стандарт W3C. Сверяйте API с реализацией браузера.</p><nav class="source-list" aria-label="Источники WebMCP"><a href="https://webmachinelearning.github.io/webmcp/" target="_blank" rel="noreferrer">01 / Спецификация <span>↗</span></a><a href="https://github.com/webmachinelearning/webmcp" target="_blank" rel="noreferrer">02 / Explainers и обсуждения <span>↗</span></a><a href="https://developer.chrome.com/blog/webmcp-epp" target="_blank" rel="noreferrer">03 / Chrome Early Preview <span>↗</span></a></nav></div>
+        <footer class="slide-footer"><span>Проверено / 05.09.2026</span><span>Далее / Библиотека макетов</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-11" aria-labelledby="title-11" data-part="Макеты" data-layout="Титульный слайд">
+      <div class="slide__canvas"><div class="slide__body layout-chapter">
+        <p class="eyebrow reveal"><span class="brand">scrolls®</span> / Библиотека макетов</p>
+        <p class="chapter-index" aria-hidden="true">Aa</p>
+        <h2 id="title-11" class="reveal">Большая идея.<br>Ясная форма.</h2>
+        <div class="chapter-bottom reveal"><p class="lead">Десять композиций<br>для следующего выступления</p><p class="small-copy">Имя Фамилия<br>Команда / Событие / 2026</p></div>
+        <footer class="slide-footer"><span>Макет / Титульный слайд</span><span>11—20 / Композиции</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--ink" id="slide-12" aria-labelledby="title-12" data-part="Макеты" data-layout="План выступления">
+      <div class="slide__canvas"><div class="slide__body layout-split">
+        <div><p class="eyebrow reveal">Макет / План выступления</p><h2 id="title-12" class="reveal">Четыре<br>части<br><span class="accent">истории</span></h2><p class="body-copy reveal">От общего контекста<br>к конкретному действию.</p></div>
+        <ol class="agenda stagger"><li><span>01</span><h3>Контекст</h3><small>Что происходит</small></li><li><span>02</span><h3>Проблема</h3><small>Что мешает двигаться</small></li><li><span>03</span><h3>Решение</h3><small>Что предлагаем</small></li><li><span>04</span><h3>Следующий шаг</h3><small>С чего начнём</small></li></ol>
+        <footer class="slide-footer"><span>Композиция / Заголовок + нумерованный список</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--violet" id="slide-13" aria-labelledby="title-13" data-part="Макеты" data-layout="Разделитель главы">
+      <div class="slide__canvas"><div class="slide__body layout-chapter">
+        <p class="eyebrow reveal">Макет / Разделитель главы</p><p class="chapter-index chapter-index--large" aria-hidden="true">02</p>
+        <h2 id="title-13" class="reveal">Время<br>разобраться</h2>
+        <p class="chapter-note reveal">Новая глава начинается<br>с нового вопроса.</p>
+        <footer class="slide-footer"><span>Композиция / Номер главы + крупный заголовок</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-14" aria-labelledby="title-14" data-part="Макеты" data-layout="Текст в двух колонках">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">Макет / Объяснение</p><h2 id="title-14" class="reveal">Заголовок задаёт мысль.<br>Текст её раскрывает.</h2>
+        <div class="layout-comparison stagger"><article><span class="mono">Контекст</span><h3>С чего всё начинается</h3><p>Короткий абзац задаёт ситуацию. Читатель понимает, что уже известно и почему вопрос заслуживает внимания.</p></article><article><span class="mono">Вывод</span><h3>Что это меняет</h3><p>Вторая колонка развивает мысль. Здесь появляется объяснение, аргумент или следствие для аудитории.</p></article></div>
+        <footer class="slide-footer"><span>Композиция / Заголовок + две колонки</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--ink" id="slide-15" aria-labelledby="title-15" data-part="Макеты" data-layout="Цитата">
+      <div class="slide__canvas"><div class="slide__body layout-quote">
+        <p class="eyebrow reveal">Макет / Цитата</p>
+        <blockquote class="reveal"><span class="quote-mark" aria-hidden="true">“</span><p id="title-15">Если всё выделено,<br>ничего не выделено.</p><footer>Пример цитатного блока <span>/ Редакционный принцип</span></footer></blockquote>
+        <footer class="slide-footer"><span>Композиция / Одна мысль + атрибуция</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-16" aria-labelledby="title-16" data-part="Макеты" data-layout="Крупные цифры">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">Макет / Крупные цифры</p><h2 id="title-16" class="reveal">Масштаб виден<br>в деталях</h2>
+        <div class="layout-metrics stagger"><article><strong>24<span>×</span></strong><span>Масштаб</span><small>Кратность изменения</small></article><article><strong>08</strong><span>Количество</span><small>Число объектов</small></article><article><strong>91<span>%</span></strong><span>Доля</span><small>Часть от общего</small></article></div>
+        <footer class="slide-footer"><span>Демонстрационные числа / Не результаты исследования</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--violet" id="slide-17" aria-labelledby="title-17" data-part="Макеты" data-layout="Процесс">
+      <div class="slide__canvas"><div class="slide__body">
+        <p class="eyebrow reveal">Макет / Процесс</p><h2 id="title-17" class="reveal">У каждого шага<br>есть результат</h2>
+        <ol class="layout-process stagger"><li><b>01 / Исследование</b><span>Понять</span><small>Сформулировать проблему</small></li><li><b>02 / Концепция</b><span>Предложить</span><small>Выбрать направление</small></li><li><b>03 / Прототип</b><span>Проверить</span><small>Собрать обратную связь</small></li><li><b>04 / Запуск</b><span>Внедрить</span><small>Измерить результат</small></li></ol>
+        <p class="process-note reveal">Следующий шаг опирается<br>на результат предыдущего.</p>
+        <footer class="slide-footer"><span>Композиция / Четыре шага на одной линии</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--paper" id="slide-18" aria-labelledby="title-18" data-part="Макеты" data-layout="Таблица">
+      <div class="slide__canvas"><div class="slide__body layout-data">
+        <div><p class="eyebrow reveal">Макет / Сравнение данных</p><h2 id="title-18" class="reveal">Сравнить<br>по общим<br>критериям</h2><p class="body-copy reveal">Один взгляд на отличия.<br>Одна шкала для всех вариантов.</p></div>
+        <div class="reveal"><table><caption>Условные варианты / Пример таблицы</caption><thead><tr><th scope="col">Критерий</th><th scope="col">Базовый</th><th scope="col">Расширенный</th></tr></thead><tbody><tr><th scope="row">Участники</th><td>5</td><td><strong>20</strong></td></tr><tr><th scope="row">Проекты</th><td>3</td><td><strong>15</strong></td></tr><tr><th scope="row">Хранилище</th><td>10 ГБ</td><td><strong>100 ГБ</strong></td></tr><tr><th scope="row">Поддержка</th><td>Почта</td><td><strong>Чат + почта</strong></td></tr></tbody></table><p class="table-note">Все значения демонстрационные.</p></div>
+        <footer class="slide-footer"><span>Композиция / Тезис слева + таблица справа</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--ink" id="slide-19" aria-labelledby="title-19" data-part="Макеты" data-layout="Визуал и подпись">
+      <div class="slide__canvas"><div class="slide__body layout-media">
+        <div><p class="eyebrow reveal">Макет / Визуал и подпись</p><h2 id="title-19" class="reveal">Покажите,<br>как это<br><span class="accent">устроено</span></h2><p class="body-copy reveal">Визуал несёт основную информацию.<br>Текст указывает, на что смотреть.</p></div>
+        <figure class="reveal"><img src="assets/interface.svg" alt="Схема интерфейса: верхняя панель, боковое меню и основная область содержимого" width="800" height="600"><figcaption>Схема интерфейса / SVG / Соотношение 4:3</figcaption></figure>
+        <footer class="slide-footer"><span>Композиция / Заголовок + изображение + подпись</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+
+    <section class="slide slide--acid" id="slide-20" aria-labelledby="title-20" data-part="Макеты" data-layout="Финал">
+      <div class="slide__canvas"><div class="slide__body layout-closing">
+        <p class="eyebrow reveal">Макет / Финал и обсуждение</p><h2 id="title-20" class="reveal">Что обсудим?</h2>
+        <div class="closing-bottom reveal"><p class="lead">Вопросы, идеи<br>и следующий шаг</p><a href="?currentSlides=11" data-slide="11">Вернуться к макетам <span>↗</span></a></div>
+        <footer class="slide-footer"><span class="brand">scrolls®</span><span>Спасибо за внимание</span><span class="slide-number"></span></footer>
+      </div></div>
+    </section>
+  </main>
+
+  <nav class="toolbar" aria-label="Управление презентацией">
+    <button type="button" id="open-index" aria-haspopup="dialog" title="Все слайды (M)">Слайды <span>☷</span></button>
+    <button type="button" id="toggle-grid" aria-pressed="false" title="Показать сетку (G)">Сетка <span>⊞</span></button>
+    <button type="button" id="fullscreen" aria-label="Полный экран" title="Полный экран (F)">⛶</button>
+    <button type="button" id="open-help" aria-haspopup="dialog" aria-label="Управление и горячие клавиши">?</button>
+  </nav>
+  <div class="progress" aria-hidden="true"></div>
+  <p class="sr-only" role="status" id="announcement" aria-live="polite"></p>
+  <dialog id="slide-index" aria-labelledby="index-title"><header><div><p class="eyebrow">Навигация</p><h2 id="index-title">Все слайды</h2></div><button type="button" data-close aria-label="Закрыть оглавление">×</button></header><ol id="index-list"></ol></dialog>
+  <dialog id="help" aria-labelledby="help-title"><header><div><p class="eyebrow">Scrolls / Управление</p><h2 id="help-title">Листайте своим способом</h2></div><button type="button" data-close aria-label="Закрыть справку">×</button></header><dl class="shortcuts"><div><dt>↓ / PageDown / Space</dt><dd>Следующий слайд</dd></div><div><dt>↑ / PageUp / Shift + Space</dt><dd>Предыдущий слайд</dd></div><div><dt>Home / End</dt><dd>Первый / последний слайд</dd></div><div><dt>M / G / F</dt><dd>Оглавление / сетка / полный экран</dd></div><div><dt>Cmd + K</dt><dd>Показать / скрыть toolbar</dd></div><div><dt>Трекпад / колесо / свайп</dt><dd>Нативная прокрутка с CSS Scroll Snap</dd></div><div><dt>Esc</dt><dd>Закрыть окно</dd></div></dl><p>При входе в fullscreen toolbar скрывается. Cmd + K переключает его в обоих режимах.</p><p>Ссылка на конкретный слайд: <code>?currentSlides=11</code></p><p>PDF: <a href="output/pdf/webmcp-presentation.pdf" download>скачать презентацию ↗</a></p></dialog>
+</body>
+</html>

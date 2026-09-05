@@ -1,0 +1,11 @@
+{
+  "name": "webmcp-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free HTML presentation engine and 20 Scrolls slides",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "pdf": "node scripts/pdf.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+tmp/
+# Keep output/pdf/*.pdf versionable so the repository can offer the download.

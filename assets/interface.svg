@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Структура веб-интерфейса</title><desc id="desc">Верхняя панель, боковая навигация, крупный заголовок и три блока содержимого.</desc>
+  <rect width="800" height="600" fill="#f3f0e8"/>
+  <g fill="none" stroke="#b6b2a8"><path d="M0 68h800M180 68v532M220 330h540"/><rect x="220" y="380" width="160" height="154"/><rect x="410" y="380" width="160" height="154"/><rect x="600" y="380" width="160" height="154"/></g>
+  <g fill="#0a0a0c"><rect x="28" y="28" width="72" height="12"/><circle cx="744" cy="34" r="13"/><rect x="28" y="108" width="124" height="34"/><rect x="28" y="169" width="84" height="8"/><rect x="28" y="207" width="98" height="8"/><rect x="28" y="245" width="65" height="8"/>
+  <text x="220" y="152" font-family="Arial, sans-serif" font-size="16" letter-spacing="3">PROJECT / OVERVIEW</text><text x="215" y="245" font-family="Arial, sans-serif" font-size="74" font-weight="700" letter-spacing="-4">Hello, world.</text><rect x="220" y="279" width="326" height="10"/></g>
+  <rect x="220" y="380" width="160" height="154" fill="#d8ff3e"/>
+  <g font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#0a0a0c"><text x="240" y="458">01</text><text x="430" y="458">02</text><text x="620" y="458">03</text></g>
+  <g fill="#0a0a0c"><rect x="240" y="493" width="88" height="7"/><rect x="430" y="493" width="88" height="7"/><rect x="620" y="493" width="88" height="7"/></g>
+</svg>
