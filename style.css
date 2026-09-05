@@ -31,6 +31,25 @@ body {
     margin: 0;
 }
 
+/* One viewport canvas paints the slide fields and the brand line below all content. */
+#brand-line {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.has-brand-line .slides {
+    position: relative;
+    z-index: 1;
+}
+
+body.has-brand-line .slide {
+    background: transparent;
+}
+
 button, a {
     -webkit-tap-highlight-color: transparent;
 }
@@ -871,7 +890,7 @@ td strong {
     line-height: 1;
 }
 
-/* CSS timelines own all animation and progress. Content stays visible without support. */
+/* CSS timelines own content animation and progress. The decorative canvas is independent. */
 @keyframes reveal-in {
     from {
         opacity: 0;
@@ -1641,6 +1660,14 @@ dialog p {
 }
 
 @media print {
+    #brand-line {
+        display: none;
+    }
+
+    body.has-brand-line .slide {
+        background: var(--bg);
+    }
+
     html {
         scroll-snap-type: none;
         scroll-behavior: auto;

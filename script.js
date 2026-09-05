@@ -41,6 +41,7 @@
 
   function goTo(index, { push = false } = {}) {
     index = clampIndex(index);
+    if (index !== currentIndex) document.dispatchEvent(new Event('slide:move'));
     if (push) writeURL(index, true);
     // Only explicit keyboard/link navigation requests a destination.
     // Wheel, trackpad and touch scrolling are entirely native CSS Scroll Snap.
