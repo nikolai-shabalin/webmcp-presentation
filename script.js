@@ -150,7 +150,7 @@
   // Small offline highlighter for talk snippets. Tokens are text nodes, not HTML.
   // This intentionally does not pretend to parse every JavaScript/HTML grammar.
   const patterns = {
-    javascript: /(?<comment>\/\/[^\n]*|\/\*[\s\S]*?\*\/)|(?<string>"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(?<keyword>\b(?:if|else|await|async|return|throw|new|const|let|var|function|typeof|true|false|null|undefined)\b)|(?<number>\b\d+(?:\.\d+)?\b)|(?<function>\b[a-zA-Z_$][\w$]*(?=\())/g,
+    javascript: /(?<comment>\/\/[^\n]*|\/\*[\s\S]*?\*\/)|(?<string>"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`)|(?<keyword>\b(?:if|else|await|async|return|throw|new|const|let|var|function|export|import|from|in|typeof|true|false|null|undefined)\b)|(?<number>\b\d+(?:\.\d+)?\b)|(?<property>\b[a-zA-Z_$][\w$]*(?=\s*:))|(?<function>\b[a-zA-Z_$][\w$]*(?=\())/g,
     html: /(?<comment><!--[\s\S]*?-->)|(?<string>"[^"]*"|'[^']*')|(?<tag><\/?[\w-]+|\/?\s*>)|(?<attribute>\b[\w-]+(?==))/g
   };
   for (const code of document.querySelectorAll('code[data-language]')) {

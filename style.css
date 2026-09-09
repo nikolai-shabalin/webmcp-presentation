@@ -466,7 +466,7 @@ h3 {
 .code {
     margin: 0;
     padding: 1.7cqw;
-    font: 400 1.01cqw/1.65 ui-monospace, SFMono-Regular, Consolas, monospace;
+    font: 400 1.21cqw/1.65 ui-monospace, SFMono-Regular, Consolas, monospace;
     tab-size: 2;
     overflow-x: auto;
 }
@@ -483,7 +483,7 @@ h3 {
     color: var(--acid);
 }
 
-.token-number, .token-attribute {
+.token-number, .token-attribute, .token-property {
     color: #dfc9ff;
 }
 
@@ -503,6 +503,27 @@ h3 {
 .layout-statement h2 {
     font-size: 8cqw;
     max-inline-size: 16ch;
+}
+
+.statement-buy {
+    position: absolute;
+    inset: 50% 5cqw auto auto;
+    translate: 0 -50%;
+    min-inline-size: 16cqw;
+    padding: 1.55cqw 2.4cqw;
+    border: 2px solid var(--ink);
+    border-radius: .55cqw;
+    background: var(--ink);
+    color: var(--acid);
+    font: 700 2.25cqw/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+    letter-spacing: -.05em;
+    text-transform: lowercase;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.statement-buy:hover {
+    background: transparent;
+    color: var(--ink);
 }
 
 .statement-proof {
@@ -1182,7 +1203,7 @@ td strong {
 }
 
 .code--compact code {
-    font-size: .88cqw;
+    font-size: 1.06cqw;
     line-height: 1.48;
 }
 
@@ -2006,12 +2027,24 @@ dialog p {
 
     .code {
         padding: 3cqw;
-        font-size: 2.45cqw;
+        font-size: 2.9cqw;
         line-height: 1.6;
+    }
+
+    .code--compact code {
+        font-size: 2.75cqw;
+        line-height: 1.55;
     }
 
     .layout-statement h2 {
         font-size: 11cqw;
+    }
+
+    .statement-buy {
+        min-inline-size: 30cqw;
+        padding: 3cqw 4cqw;
+        border-radius: 1cqw;
+        font-size: 4.2cqw;
     }
 
     .statement-proof {
@@ -2286,8 +2319,12 @@ dialog p {
     }
 
     .code {
-        font-size: 2.2cqw;
+        font-size: 2.6cqw;
         line-height: 1.5;
+    }
+
+    .code--compact code {
+        font-size: 2.5cqw;
     }
 }
 
