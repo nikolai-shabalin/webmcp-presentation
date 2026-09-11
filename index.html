@@ -18,10 +18,11 @@
 <a class="skip-link" href="#slide-1">К презентации</a>
 
 <main class="slides" aria-label="WebMCP — интерфейс для нового пользователя">
-    <section class="slide slide--ink" id="slide-1" aria-labelledby="title-1" data-part="Вступление"
+    <section class="slide slide--cover-light" id="slide-1" aria-labelledby="title-1" data-part="Вступление"
              data-layout="Обложка">
         <div class="slide__canvas">
             <div class="slide__body layout-cover">
+                <img class="gorod-it-logo" src="assets/gorod-it-logo.png" alt="Город IT">
                 <div class="cover-heading reveal"><p class="mono overline">Web Model Context Protocol</p>
                     <h1 id="title-1">Web<span class="accent">MCP</span><span class="cover-dot">↗</span></h1></div>
                 <div class="cover-bottom reveal"><p class="lead">Интерфейс для<br>нового пользователя</p>
@@ -682,12 +683,22 @@ const products = JSON.parse(result);</code></pre>
         </div>
     </section>
 
-    <section class="slide slide--ink" id="slide-28" aria-labelledby="title-28" data-part="Финал" data-layout="Подписка">
+    <section class="slide slide--cover-light" id="slide-28" aria-labelledby="title-28" data-part="Финал" data-layout="Подписка">
         <div class="slide__canvas">
             <div class="slide__body subscribe-layout">
                 <h2 id="title-28" class="reveal">подпишись</h2>
-                <figure class="subscribe-qr reveal">
-                    <img src="assets/qr.png" alt="QR-код для подписки" width="1024" height="1024">
+                <img class="gorod-it-logo" src="assets/gorod-it-logo.png" alt="Город IT">
+                <figure class="subscribe-qr subscribe-qr--gorod-it reveal">
+                    <img src="assets/qr-gorod-it.png" alt="QR-код для обратной связи Город IT" width="512" height="512">
+                    <figcaption>оставить обратную связь</figcaption>
+                </figure>
+                <figure class="subscribe-qr subscribe-qr--shabalin reveal">
+                    <img src="assets/qr-shabalin.png" alt="QR-код Николая Шабалина" width="1000" height="1000">
+                    <figcaption>Николай Шабалин</figcaption>
+                </figure>
+                <figure class="subscribe-qr subscribe-qr--sberhealth reveal">
+                    <img src="assets/qr-sberhealth.png" alt="QR-код СберЗдоровья" width="565" height="565">
+                    <figcaption>сберздоровье</figcaption>
                 </figure>
             </div>
         </div>
