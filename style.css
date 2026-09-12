@@ -102,6 +102,18 @@ a {
     color: var(--fg);
 }
 
+.slide--store-image .slide__canvas,
+.slide--store-image .slide__body,
+.slide--store-image img {
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.slide--store-image img {
+    display: block;
+    object-fit: contain;
+}
+
 .slide--paper {
     --bg: var(--paper);
     --fg: var(--ink);

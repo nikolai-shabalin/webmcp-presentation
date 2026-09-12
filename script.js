@@ -35,7 +35,8 @@
       if (i === index) link.setAttribute('aria-current', 'page');
       else link.removeAttribute('aria-current');
     });
-    announcement.textContent = document.getElementById(slides[index].getAttribute('aria-labelledby')).textContent;
+    const title = document.getElementById(slides[index].getAttribute('aria-labelledby'));
+    announcement.textContent = title?.textContent ?? slides[index].getAttribute('aria-label') ?? slides[index].dataset.layout;
     writeURL(index);
   }
 
