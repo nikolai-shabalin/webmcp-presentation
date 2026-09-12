@@ -316,7 +316,17 @@
                     <p><code>description</code><span>когда этот tool уместен</span></p>
                 </div>
             </div>
+            <footer class="slide-footer"><span
+                class="slide-number"></span></footer>
         </div>
+    </section>
+
+    <section class="slide slide--paper slide--store-image" id="slide-chrome-devtools-1" aria-label="Chrome DevTools" data-part="Пошагово" data-layout="Chrome DevTools">
+        <div class="slide__canvas"><div class="slide__body"><img src="assets/chrome-devtools-1.png" alt=""></div></div>
+    </section>
+
+    <section class="slide slide--paper slide--store-image" id="slide-chrome-devtools-2" aria-label="Chrome DevTools" data-part="Пошагово" data-layout="Chrome DevTools">
+        <div class="slide__canvas"><div class="slide__body"><img src="assets/chrome-devtools-2.png" alt=""></div></div>
     </section>
 
     <section class="slide slide--ink" id="slide-19" aria-labelledby="title-19" data-part="Пошагово"
@@ -469,36 +479,6 @@ if ("modelContext" in document) {
                 <footer class="slide-footer"><a href="https://webmachinelearning.github.io/webmcp/#sotd"
                                                 target="_blank" rel="noreferrer">Draft Community Group Report · 04.09.2026 ↗</a><span
                         class="slide-number"></span></footer>
-            </div>
-        </div>
-    </section>
-
-    <section class="slide slide--ink" id="slide-25" aria-labelledby="title-25" data-part="Пошагово"
-             data-layout="Код · Вызов">
-        <div class="slide__canvas">
-            <div class="slide__body layout-code">
-                <div>
-                    <p class="eyebrow reveal">Шаг 06 / 06 · Код</p>
-                    <h2 id="title-25" class="reveal">Проверяем<br>полный путь.</h2>
-                </div>
-                <figure class="code-frame reveal">
-                    <figcaption>agent-demo.js <span>JavaScript</span></figcaption>
-                    <pre class="code code--compact"><code data-language="javascript">const tools =
-  await document.modelContext.getTools();
-
-const search = tools.find(
-  tool => tool.name === "search_products"
-);
-if (!search) throw new Error("Tool not found");
-
-const result =
-  await document.modelContext.executeTool(
-    search,
-    { query: "авокадо", limit: 3 }
-  );
-
-const products = JSON.parse(result);</code></pre>
-                </figure>
             </div>
         </div>
     </section>
