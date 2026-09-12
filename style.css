@@ -997,6 +997,63 @@ td strong {
     letter-spacing: -.075em;
 }
 
+.subscribe-layout--two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3cqw;
+    padding-inline: 10cqw;
+}
+
+.subscribe-layout--two .subscribe-qr {
+    inline-size: 76%;
+}
+
+.subscribe-layout--two .subscribe-qr--shabalin {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.subscribe-layout--two .subscribe-qr--sberhealth {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.feedback-layout h2 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    max-inline-size: 12ch;
+    font-size: 5.5cqw;
+    line-height: .9;
+    letter-spacing: -.075em;
+}
+
+.feedback-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 34cqw;
+    grid-template-rows: 1fr;
+    column-gap: 5cqw;
+}
+
+.feedback-qr {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+    inline-size: min(27cqw, 100%);
+    max-block-size: 27cqw;
+    margin: 0;
+    padding: .8cqw;
+    background: #fff;
+    border-radius: .5cqw;
+}
+
+.feedback-qr img {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1;
+}
+
 .subscribe-qr {
     align-self: center;
     justify-self: center;
@@ -2611,6 +2668,25 @@ dialog p {
         white-space: nowrap;
     }
 
+    .subscribe-layout--two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding-inline: 4cqw;
+    }
+
+    .subscribe-layout--two .subscribe-qr {
+        inline-size: 76%;
+    }
+
+    .feedback-layout h2 {
+        font-size: 7cqw;
+    }
+
+    .feedback-qr {
+        inline-size: min(27cqw, 100%);
+        max-block-size: 27cqw;
+        padding: 2.5cqw;
+    }
+
     .subscribe-qr {
         padding: 2.5cqw;
     }
@@ -2625,6 +2701,14 @@ dialog p {
     .subscribe-qr--sberhealth {
         grid-row: 2;
         inline-size: 88%;
+    }
+
+    .subscribe-layout--two .subscribe-qr--shabalin {
+        grid-column: 1;
+    }
+
+    .subscribe-layout--two .subscribe-qr--sberhealth {
+        grid-column: 2;
     }
 
     .subscribe-qr--shabalin {
